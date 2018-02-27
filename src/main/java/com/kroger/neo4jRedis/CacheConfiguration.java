@@ -16,10 +16,6 @@ import org.springframework.data.redis.core.RedisTemplate;
 @Configuration
 public class CacheConfiguration extends CachingConfigurerSupport {
 
-    class ErrorHandler extends JedisConnectionFactory {
-
-    }
-
     @Bean
     public JedisConnectionFactory redisConnectionFactory() {
         JedisConnectionFactory redisConnectionFactory = new JedisConnectionFactory();
