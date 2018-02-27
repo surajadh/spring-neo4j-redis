@@ -31,10 +31,8 @@ public class RestTestController {
     RedisCacheManager redisCacheManager;
 
     @RequestMapping("/getAllMovies")
-//    @Cacheable(value = "movies", key = "#title")
     public Movie getAllMovies(@RequestParam("title") String title, @RequestParam("session") String session) {
         boolean skipRedis = false;
-        //Clear cache
         try {
             Cache.ValueWrapper cache = redisCacheManager.getCache("movies").get(title);
             if(cache != null) {
@@ -55,11 +53,4 @@ public class RestTestController {
 
         return result;
     }
-//
-//    @ExceptionHandler({ JedisConnectionException.class })
-//    public void handleGetAllMoviesWhenRedisUnavailable(HttpServletResponse response, InvalidRecipeIdException e) throws IOException {
-//
-//    }
-
-
 }
