@@ -1,7 +1,7 @@
 # spring-neo4j-redis
 Example repo with neo4j repository and redis cache
 
-Caching is optional, call will hit repository if redis is down. Caching TTL is 50s can be changed as per configuration file
+The project will be for use case where caching is optional and application should serve even when cache is down.
 
 # To Run
 - Start redis, 
