@@ -1,0 +1,11 @@
+spring:
+  cache:
+    type: redis
+  redis:
+    host: 127.0.0.1
+    port: 6378
+  data:
+    neo4j:
+      username: neo4j
+      password: neo4j
+      uri: bolt://localhost
